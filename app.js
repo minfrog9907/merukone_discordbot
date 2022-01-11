@@ -1,6 +1,6 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
-const { token } = require('./config.json');
+const { token, token_test } = require('./config.json');
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -14,4 +14,4 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login(token.token_test);
+client.login(token);
